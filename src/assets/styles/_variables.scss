@@ -1,0 +1,16 @@
+@use "sass:color";
+
+$font-pagina :400 16px / 1.6 'Merriweather', serif;
+$font-secundaria:'Montserrat', sans-serif;
+
+$color-pagina:rgb(2,15,20);
+$color-fondo-pagina: rgb(245,246,240);
+$color-fondo-pie: rgb(67, 58, 68);
+$color-pie: rgb(255,255,255);
+$color-hipervinculos:rgba(255, 80, 50, 1); 
+$color-hipervinculos-cabecera:rgb(2, 15, 20);
+$color-hipervinculos-pie:rgb(255,255,255);
+$color-hipervinculos-menu: rgba(2,15,20,1);
+$color-hipervinculos-hover:rgba(255, 80, 50, .5);
+$color-titulo-secundario:blueviolet;
+$color-hipervinculos-menu-hover:color.adjust($color-hipervinculos-menu,$lightness: -30%, $alpha: -.4)

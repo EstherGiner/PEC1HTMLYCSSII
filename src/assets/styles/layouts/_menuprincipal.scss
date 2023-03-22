@@ -1,0 +1,40 @@
+/*Menú principal*/
+nav.navbar {
+  font-family: $font-secundaria;
+  text-transform: uppercase;
+
+  ul {
+    list-style-type: none;
+  }
+  li {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  a {
+    font-weight: 700;
+    color: $color-hipervinculos-menu;
+    //pseudoclase
+    &:hover {
+      color: $color-hipervinculos-menu-hover;
+    }
+    &:active {
+      font-style: italic;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav.navbar {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    ul li {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

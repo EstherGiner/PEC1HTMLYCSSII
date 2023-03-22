@@ -1,0 +1,46 @@
+/****************************
+Página index.html
+*****************************/
+ul.sitios {
+  list-style-type: none;
+
+  li {
+    padding: 15px;
+
+    img {
+      display: block;
+      margin-inline: auto;
+    }
+
+    p {
+      &:first-of-type {
+        margin-top: 15px;
+      }
+
+      &:first-of-type::before {
+        content: "";
+        display: inline-block;
+        width: 5%;
+        height: 4px;
+        background-color: $color-pagina;
+        margin-right: 15px;
+        margin-bottom: 5px;
+
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  ul.sitios.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  ul.sitios.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33.33333%);
+  }
+}

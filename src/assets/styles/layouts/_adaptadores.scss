@@ -1,0 +1,44 @@
+/*Las reglas que van a continuación consiguen que los contenidos dentro de .contaninerfluid o .container se adapten a los diversos dispositivos.*/
+.containerfluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .flexcontainer {
+    display: flex;
+  }
+  .spacebetween {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

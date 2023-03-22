@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+/**
+ * Import variables
+ */
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+/*Estilos para la pec1*/
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700i&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 16px/1.6 "Merriweather", serif;
+  background-color: rgb(245, 246, 240);
+  color: rgb(2, 15, 20);
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin-bottom: 1.5rem;
+}
+
+h3, .h3 {
+  font-size: 1.35rem;
+  line-height: 1em;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+  h2, .h2 {
+    font-size: 2rem;
+  }
+  h3, .h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+a {
+  color: rgb(255, 80, 50);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255, 80, 50, 0.5);
+}
+
+/*Clases aplicadas a los elementos multimedia del sitio */
+.imgFluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Clases para alineamiento de textos*/
+.textCenter {
+  text-align: center;
+}
+
+/*Clase para esconder un elemento que será únicamente visible a los lectores de pantalla*/
+.sr {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/****************************
+Contenedores del sitio
+*****************************/
+main {
+  width: 100%;
+  padding: 50px 0;
+}
+
+header {
+  padding: 15px 0;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+/*Contenido del header*/
+header {
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand h1 span:last-child {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.brand img {
+  margin-right: 15px;
+}
+
+.brand a {
+  color: rgb(2, 15, 20);
+}
+
+.brand, .navbar {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .brand, .navbar {
+    margin-bottom: 0;
+  }
+}
+/*Contenido del footer*/
+footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  position: relative;
+  text-align: center;
+  background-color: rgb(67, 58, 68);
+  color: rgb(255, 255, 255);
+}
+
+footer p {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.goTop {
+  position: absolute;
+  right: 15px;
+  bottom: 0px;
+  font-size: 2rem;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover {
+  color: rgba(255, 80, 50, 0.5);
+}
+
+@media (min-width: 768px) {
+  footer {
+    text-align: left;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer ul li {
+    display: inline-block;
+  }
+  .footer ul li::after {
+    content: "•";
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .footer ul li:last-child::after {
+    content: "";
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/*Las reglas que van a continuación consiguen que los contenidos dentro de .contaninerfluid o .container se adapten a los diversos dispositivos.*/
+.containerFluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .flexContainer {
+    display: flex;
+  }
+  .spaceBetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+/*Menú principal*/
+nav.navbar {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+nav.navbar ul {
+  list-style-type: none;
+}
+
+nav.navbar li {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+nav.navbar a {
+  font-weight: 700;
+  color: rgb(2, 15, 20);
+}
+
+nav.navbar a:hover {
+  color: rgba(2, 15, 20, 0.5);
+}
+
+nav.navbar a.active {
+  font-style: italic;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  nav.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav.navbar ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/****************************
+Página index.html
+*****************************/
+ul.sitios {
+  list-style-type: none;
+}
+
+ul.sitios li {
+  padding: 15px;
+}
+
+ul.sitios li img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul.sitios li p:first-of-type {
+  margin-top: 15px;
+}
+
+ul.sitios li p:first-of-type::before {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 4px;
+  background-color: rgb(2, 15, 20);
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  ul.sitios.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+  }
+}
+@media (min-width: 1200px) {
+  ul.sitios.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33.33333%);
+  }
+}
+/**
+ * Do NOT include anything else in this file!
+ *//*# sourceMappingURL=main.css.map */

@@ -1,0 +1,133 @@
+/*Estilos para la pec1*/
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700i&display=swap");
+//todas las reglas para la cabecera
+@import "./header";
+
+//todas las reglas para los pies de página
+
+@import "./footer";
+
+//todas las reglas para que los contenidos se adapten al tamaño de las pantallas
+
+@import "./adaptadores";
+
+//todas las reglas para el menú principal
+
+@import "./menuprincipal";
+
+//todas las reglas para la página index
+
+@import "./index";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: $font-pagina;
+  background-color: $color-fondo-pagina;
+  color: $color-pagina;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin-bottom: 1.5rem;
+}
+
+h3,
+.sitios__titulo {
+  font-size: 1.35rem;
+  line-height: 1em;
+  margin-bottom: 1rem;
+}
+.sitios__titulo--secundary {
+  color: $color-titulo-secundario;
+  font-weight: bold;
+  
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3,
+  .sitios__titulo {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+a {
+ // color: $color-hipervinculos;
+  text-decoration: none;
+  /*pseudoclases
+  &:hover {
+    color: $color-hipervinculos-hover;
+  }*/
+}
+
+/*Clases aplicadas a los elementos multimedia del sitio */
+.imgfluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Clases para alineamiento de textos*/
+.textcenter {
+  text-align: center;
+}
+
+/*Clase para esconder un elemento que será únicamente visible a los lectores de pantalla*/
+.sr {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/****************************
+Contenedores del sitio
+*****************************/
+main {
+  width: 100%;
+  padding: 50px 0;
+}
+
+header {
+  padding: 15px 0;
+}
+
+footer {
+  padding: 30px 0;
+}
+

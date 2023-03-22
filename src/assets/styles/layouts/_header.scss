@@ -1,0 +1,45 @@
+/*Contenido del header*/
+header {
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 span:last-child {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  img {
+    margin-right: 15px;
+  }
+
+  a {
+    color: $color-hipervinculos-cabecera;
+  }
+}
+
+.brand,
+.navbar {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .brand,
+  .navbar {
+    margin-bottom: 0;
+  }
+}
